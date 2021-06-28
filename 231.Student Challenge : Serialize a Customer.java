@@ -9,6 +9,7 @@ public class testMain {
 
     public static void main(String[] args) throws Exception
     {
+        //Output
         FileOutputStream fos=
                 new FileOutputStream("D:\\java_programs\\Prograams\\New folder\\HackerRank\\Student_challange_231\\Float.txt");
 
@@ -24,7 +25,23 @@ public class testMain {
         }
 
         dos.close();
-        dos.close();
+        fos.close();
+        
+        //output
+        FileInputStream fis=
+                new FileInputStream("D:\\java_programs\\Prograams\\New folder\\HackerRank\\Student_challange_231\\Float.txt");
+
+        DataInputStream dis = new DataInputStream(fis);
+
+        int n = 4;
+
+        for(int i = 0; i<n; i++)
+        {
+            System.out.println(dis.readFloat());
+        }
+
+        dis.close();
+        fis.close();
     }
 }
 
